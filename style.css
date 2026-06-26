@@ -360,3 +360,7 @@ h1 {
 .message-btn:hover {
     background-color: #ececec;
 }
+
+.profile-card:hover {
+    background-color: #f7f6f680;
+}

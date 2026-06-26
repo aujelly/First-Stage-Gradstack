@@ -143,11 +143,27 @@
             });
         });
 
-        // Dropdown filter function
+        // Show dropdown filter
         document.querySelectorAll(".dropdown-btn").forEach(btn => {
             btn.addEventListener("click", () => {
                 const dropdown = btn.parentElement;
                 dropdown.classList.toggle("open");
+            });
+        });
+
+        // Dropdown filter based on role
+        document.querySelectorAll(".dropdown-menu li").forEach(item => {
+            item.addEventListener("click", () => {
+                const role = item.innerText.toLowerCase();
+
+                profileCards.forEach(card => {
+                    const cardRole = card.querySelector(".role").innerText.toLowerCase();
+                    if (cardRole === role) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
             });
         });
     </script>
