@@ -37,9 +37,9 @@
             <div class="search-container">
                 <div class="search-bar">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Search">
+                    <input id="searchInput" type="text" placeholder="Search">
                 </div>
-                <button class="search-btn">Search</button>
+                <button id="searchBtn" class="search-btn" disabled>Search</button>
             </div>
 
             <div class="filter-container">
@@ -113,15 +113,24 @@
                     <button class="message-btn"><i class="fa-solid fa-comment-dots"></i></button>
                 </div>
             </div>
-
         </main>
     </div>
 
     <script>
-        document.querySelectorAll('.dropdown-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
+        // Get all ids
+        const searchInput = document.getElementById("searchInput");
+        const searchBtn = document.getElementById("searchBtn");
+
+        // Enabling and disabling search button based on the input
+        searchInput.addEventListener("input", () => {
+            searchBtn.disabled = searchInput.value.trim() === "";
+        })
+
+        // Dropdown filter function
+        document.querySelectorAll(".dropdown-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
                 const dropdown = btn.parentElement;
-                dropdown.classList.toggle('open');
+                dropdown.classList.toggle("open");
             });
         });
     </script>

@@ -163,6 +163,13 @@ h1 {
     background-color: #367a42;
 }
 
+.search-btn:disabled {
+    background-color: #969696;
+    color: #c0c0c0;
+    border-color: #727272;
+    cursor: not-allowed;
+}
+
 
 /* DROPDOWN FILTER */
 .filter-container {
