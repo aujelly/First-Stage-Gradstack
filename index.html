@@ -42,8 +42,53 @@
                 <button class="search-btn">Search</button>
             </div>
 
+            <div class="filter-container">
+                <div class="dropdown">
+                    <button class="dropdown-btn">
+                        <span>Role</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>Member</li>
+                        <li>Mentor</li>
+                        <li>Employer</li>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropdown-btn">
+                        <span>Education</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </button>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropdown-btn">
+                        <span>Career Goals</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </button>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropdown-btn">
+                        <span>Skills</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </button>
+                </div>
+            </div>
+
+
             <div class="profile-card"></div>
         </main>
     </div>
+
+    <script>
+        document.querySelectorAll('.dropdown-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const dropdown = btn.parentElement;
+                dropdown.classList.toggle('open');
+            });
+        });
+    </script>
 </body>
 </html>

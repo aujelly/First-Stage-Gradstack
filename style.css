@@ -14,6 +14,17 @@ body {
     gap: 0.5rem;
 }
 
+.main {
+    flex: 1;
+    background-color: #FFFFFF;
+    padding: 2.5rem;
+    border-radius: 25px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+/* VERTICAL NAV BAR */
 .nav {
     background-color: #FFFFFF;
     flex: 0 0 300px;
@@ -84,15 +95,7 @@ body {
     color: #367a42;
 }
 
-.main {
-    flex: 1;
-    background-color: #FFFFFF;
-    padding: 2.5rem;
-    border-radius: 25px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
+/* TITLE PAGE */
 h1 {
     display: inline-block;
     border-bottom: 3px solid #232047;
@@ -106,10 +109,13 @@ h1 {
     margin-bottom: 2rem;
 }
 
+
+/* SEARCH BAR & BUTTON */
 .search-container {
   display: flex;
   align-items: center;
   gap: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .search-bar {
@@ -153,4 +159,72 @@ h1 {
 
 .search-btn:hover {
     background-color: #367a42;
+}
+
+
+/* DROPDOWN FILTER */
+.filter-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.75rem 2.5rem;
+    border: 2px solid #232047;
+    border-radius: 100px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #232047;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    width: 100%;
+}
+
+.dropdown-btn i {
+    font-size: 1.25rem;
+    color: #232047;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #FFFFFF;
+    border: 2px solid #232047;
+    border-radius: 12px;
+    margin-top: 0.5rem;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    display: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.dropdown-menu li {
+    padding: 0.75rem 2.5rem;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background-color: #F3FAF4;;
+    border-radius: 12px;
+}
+
+.dropdown.open .dropdown-menu {
+    display: block;
+}
+
+.dropdown.open .dropdown-btn i {
+    transform: rotate(180deg);
 }
