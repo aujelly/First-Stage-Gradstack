@@ -58,7 +58,7 @@ body {
 .nav-list li a {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 0.75rem;
     text-decoration: none;
     font-weight: 600;
     font-style: normal;
@@ -81,12 +81,21 @@ body {
 }
 
 .nav-list li a:hover {
-    color: #6dc57a;
+    color: #367a42;
+}
+
+.main {
+    flex: 1;
+    background-color: #FFFFFF;
+    padding: 2.5rem;
+    border-radius: 25px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 h1 {
     display: inline-block;
-    border: 3px solid #232047;
+    border-bottom: 3px solid #232047;
     font-weight: 700;
     font-style: normal;
     font-size: 2.5rem;
@@ -94,4 +103,54 @@ h1 {
     padding-bottom: 0.625rem;
     width: 600px;
     max-width: 100%;
+    margin-bottom: 2rem;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #ECECEC;
+    border: 2px solid #232047;
+    border-radius: 100px;
+    padding: 0.5rem 1rem;
+    flex: 1;
+}
+
+.search-bar i {
+    color: #232047;
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.search-bar input {
+    background-color: #ECECEC;
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.search-btn {
+    background-color: #479953;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.25rem;
+    border: 2px solid #2E6B37;
+    border-radius: 100px;
+    padding: 0.75rem 3rem;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background-color: #367a42;
 }
