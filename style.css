@@ -43,6 +43,7 @@ body {
     height: auto;
     display: inline-block;
     margin-bottom: 3rem;
+    margin-top: 0;
 }
 
 .nav-list {
@@ -101,12 +102,13 @@ h1 {
     border-bottom: 3px solid #232047;
     font-weight: 700;
     font-style: normal;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #232047;
     padding-bottom: 0.625rem;
     width: 600px;
     max-width: 100%;
     margin-bottom: 2rem;
+    margin-top: 0;
 }
 
 
@@ -148,7 +150,7 @@ h1 {
 
 .search-btn {
     background-color: #479953;
-    color: #fff;
+    color: #FFFFFF;
     font-weight: 600;
     font-size: 1.25rem;
     border: 2px solid #2E6B37;
@@ -167,6 +169,7 @@ h1 {
     display: flex;
     flex-direction: row;
     gap: 1.25rem;
+    margin-bottom: 2rem;
 }
 
 .dropdown {
@@ -179,10 +182,10 @@ h1 {
     align-items: center;
     justify-content: space-between;
     gap: 0.75rem;
-    padding: 0.75rem 2.5rem;
+    padding: 0.75rem 1.75rem;
     border: 2px solid #232047;
     border-radius: 100px;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #232047;
     background-color: #FFFFFF;
@@ -227,4 +230,126 @@ h1 {
 
 .dropdown.open .dropdown-btn i {
     transform: rotate(180deg);
+}
+
+/* PROFILE CARD */
+.profile-card {
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    padding: 1.25rem;
+    width: 270px;
+    height: 345px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid #232047;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-pic {
+    width: 64px;
+    height: 64px;
+    border-radius: 100px;
+    object-fit: cover;
+}
+
+.profile-info .name {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #232047;
+}
+
+.profile-info .role {
+    margin: 0.25rem 0 0;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #1A80CB;
+}
+
+.subheading {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #232047;
+    margin-bottom: 0.25rem;
+}
+
+.profile-section p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #232047bd;
+}
+
+.pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3125rem;
+}
+
+.pill {
+    background: #F3FAF4;
+    border: 1px solid #8CBA92;
+    border-radius: 100px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #232047;
+}
+
+.pill.skill {
+    background: #ecececcd;
+    border: 1px solid #868686;
+}
+
+.profile-actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+}
+
+.connect-btn {
+    background-color: #479953;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 1.25rem;
+    border: 2px solid #2E6B37;
+    border-radius: 100px;
+    padding: 0.5rem 3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.connect-btn:hover {
+    background-color: #367a42;
+}
+
+.message-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+}
+
+.message-btn i {
+    font-size: 1.25rem;
+    color: #232047;
+}
+
+.message-btn:hover {
+    background-color: #ececec;
 }
