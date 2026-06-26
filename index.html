@@ -37,7 +37,7 @@
             <div class="search-container">
                 <div class="search-bar">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input id="searchInput" type="text" placeholder="Search">
+                    <input id="searchInput" type="text" placeholder="Search keyword">
                 </div>
                 <button id="searchBtn" class="search-btn" disabled>Search</button>
             </div>
@@ -117,14 +117,31 @@
     </div>
 
     <script>
-        // Get all ids
+        // Get all elements
         const searchInput = document.getElementById("searchInput");
         const searchBtn = document.getElementById("searchBtn");
+        const profileCards = document.querySelectorAll(".profile-card");
 
         // Enabling and disabling search button based on the input
         searchInput.addEventListener("input", () => {
             searchBtn.disabled = searchInput.value.trim() === "";
-        })
+        });
+
+        // Card search
+        searchBtn.addEventListener("click", () => {
+            const keyword = searchInput.value.toLowerCase();
+
+            profileCards.forEach(card => {
+                const cardText = card.innerText.toLowerCase();
+
+                // Show the card id keyword is found
+                if (cardText.includes(keyword)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
 
         // Dropdown filter function
         document.querySelectorAll(".dropdown-btn").forEach(btn => {
